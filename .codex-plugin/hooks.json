@@ -1,0 +1,19 @@
+{
+  "description": "세션마다 plain-korean 규칙을 넣습니다.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -n \"${PLUGIN_ROOT}\" ] && python3 \"${PLUGIN_ROOT}/hooks/session_start.py\" || true",
+            "timeout": 5,
+            "statusMessage": "Loading Plain Korean...",
+            "additionalContextLimit": 0
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "plain-korean",
+  "version": "0.1.0",
+  "description": "번역투 개념어, 'A가 아니라 B' 꼴, 사실을 더하지 않는 꾸미는 말을 걸러서 사람이 읽기 쉬운 한국어로 쓰게 하는 스킬과 린터, 훅.",
+  "author": {
+    "name": "Luke",
+    "url": "https://github.com/tofutree23"
+  },
+  "homepage": "https://github.com/tofutree23/plain-korean",
+  "repository": "https://github.com/tofutree23/plain-korean",
+  "license": "MIT",
+  "keywords": [
+    "korean",
+    "writing",
+    "plain-language",
+    "linter",
+    "skill"
+  ],
+  "skills": "./skills/",
+  "hooks": "./.codex-plugin/hooks.json",
+  "interface": {
+    "displayName": "Plain Korean",
+    "shortDescription": "사람이 읽기 쉬운 한국어로 쓰게 합니다.",
+    "longDescription": "번역투 개념어, 'A가 아니라 B' 꼴, 꾸미는 말을 피하는 규칙을 세션 시작 때 넣고, 문서를 고칠 때 쓰는 스킬과 린터를 제공합니다.",
+    "developerName": "Luke",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://github.com/tofutree23/plain-korean",
+    "defaultPrompt": [
+      "이 문서를 사람이 읽기 쉬운 한국어로 고쳐 줘.",
+      "이 PR 본문에서 번역투를 찾아 줘."
+    ],
+    "brandColor": "#0F766E"
+  }
+}

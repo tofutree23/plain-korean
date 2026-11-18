@@ -1,0 +1,56 @@
+{
+  "name": "plain-korean",
+  "displayName": "Plain Korean",
+  "description": "번역투 개념어, 'A가 아니라 B' 꼴, 사실을 더하지 않는 꾸미는 말을 걸러서 사람이 읽기 쉬운 한국어로 쓰게 하는 스킬과 린터, 훅.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Luke",
+    "url": "https://github.com/tofutree23"
+  },
+  "homepage": "https://github.com/tofutree23/plain-korean",
+  "repository": "https://github.com/tofutree23/plain-korean",
+  "license": "MIT",
+  "keywords": [
+    "korean",
+    "writing",
+    "plain-language",
+    "linter",
+    "skill"
+  ],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/lint_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/lint_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${CLAUDE_PLUGIN_ROOT}/hooks/lint_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
