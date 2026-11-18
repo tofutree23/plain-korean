@@ -1,6 +1,8 @@
 ---
 name: writing-plain-korean
 description: Use when writing Korean prose for people (chat answers, Slack messages, design docs, PR bodies, summaries), especially when explaining or summarizing an existing document whose terms are abstract or translated from English (예: 축, 표면, 층, 판정, 집행, 거처, 표식, 분담, 이양, 펼친다), or when sentences lean on "A가 아니라 B" contrasts and filler words (실제로, 정상적으로, 확실히). 한국어 설명, 문서, 요약, 보고를 쓸 때.
+metadata:
+  version: "1.0.0"
 ---
 
 # 사람이 쓰는 한국어로 쓰기

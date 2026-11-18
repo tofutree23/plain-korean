@@ -80,6 +80,21 @@ class SessionStartTest(unittest.TestCase):
         self.assertNotIn("붙여 넣는다", proc.stdout)
 
 
+class VersionTest(unittest.TestCase):
+    def test_every_manifest_names_the_same_version(self):
+        versions = {
+            "claude plugin": json.loads((ROOT / ".claude-plugin" / "plugin.json").read_text())["version"],
+            "claude marketplace": json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text())["plugins"][0]["version"],
+            "codex plugin": json.loads((ROOT / ".codex-plugin" / "plugin.json").read_text())["version"],
+        }
+        skill = (ROOT / "skills" / "writing-plain-korean" / "SKILL.md").read_text(encoding="utf-8")
+        import re
+        versions["skill"] = re.search(r'version: "([^"]+)"', skill).group(1)
+        self.assertEqual(len(set(versions.values())), 1, versions)
+        changelog = (ROOT / "CHANGELOG.md").read_text(encoding="utf-8")
+        self.assertIn(f"## {versions['skill']}", changelog)
+
+
 class LinterSelfTest(unittest.TestCase):
     def test_self_test_passes(self):
         proc = subprocess.run([sys.executable, "-I", str(LINTER), "--self-test"], capture_output=True, text=True)

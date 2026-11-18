@@ -1,6 +1,6 @@
 {
   "name": "plain-korean",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "번역투 개념어, 'A가 아니라 B' 꼴, 사실을 더하지 않는 꾸미는 말을 걸러서 사람이 읽기 쉬운 한국어로 쓰게 하는 스킬과 린터, 훅.",
   "author": {
     "name": "Luke",

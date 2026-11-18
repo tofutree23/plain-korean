@@ -39,6 +39,21 @@ npx skills add tofutree23/plain-korean
 
 훅은 Python 3.9 이상이 필요합니다. 외부 패키지는 쓰지 않습니다.
 
+## 버전과 업데이트
+
+지금 버전은 1.0.0입니다. 바뀐 내용은 [`CHANGELOG.md`](CHANGELOG.md)에 적습니다. 새 버전이 나오면 아래 명령으로 받습니다.
+
+```bash
+claude plugin marketplace update plain-korean
+claude plugin update plain-korean@plain-korean
+```
+
+특정 버전을 쓰려면 `plain-korean--v1.0.0` 같은 태그를 지정해서 마켓플레이스를 추가합니다.
+
+```bash
+claude plugin marketplace add tofutree23/plain-korean@plain-korean--v1.0.0
+```
+
 ## 들어 있는 것
 
 | 파일 | 하는 일 |
